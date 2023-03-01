@@ -89,13 +89,14 @@ img{
 /**HEADER RULES**/
 
 .logo{
-  width: 75px;
+  width: 70px;
 }
 
 .header{
   background-color: white;
   width: 1365px;
 }
+
 .header-menu{
   display: flex;
   justify-content: space-between;
@@ -110,7 +111,6 @@ img{
   gap: 15px;
   text-transform: uppercase;
 }
-
 /**MAIN RULES**/
 
 .content-title{
@@ -122,7 +122,7 @@ img{
 .row-brands{
   color: white;
   background-color:#0282F9 ;
-  padding: 30px;
+  padding: 20px;
 }
 .list-brand{
   display: flex;
@@ -150,18 +150,28 @@ img{
 .row-hero{
   background-image: url('../public/footer-bg.jpg');
   display: flex;
+  position: relative;
 }
 
+.position{
+  width: 420px;
+  position: absolute;
+  right: 200px;
+  bottom: 0;
+  top: 0;
+}
 .list-hero{
   list-style: none;
   padding-left: 20px;
   color: white;
   text-align: left;
+  padding-bottom: 20px;
 }
 
 .list-title{
   text-transform: uppercase;
   font-size: 20px;
+  padding-top: 20px;
 }
 
 /**FOOTER RULES**/
@@ -170,7 +180,7 @@ img{
   justify-content: space-between;
   align-items: center;
   background-color: #303030;
-  min-height: 80px;
+  min-height: 70px;
   padding-left: 20px;
 }
 

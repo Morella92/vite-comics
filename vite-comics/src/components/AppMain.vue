@@ -208,8 +208,11 @@
             </li> -->
           </ul>
 
+          <img class="position" src="../../public/dc-logo-bg.png" alt="">
+
         </div>
 
+        
       </div>
     </main>
   </template>
