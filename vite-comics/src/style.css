@@ -33,7 +33,6 @@ a:hover {
 }
 
 body {
-  margin: 0;
   display: flex;
   background-color: #1C1C1C;
   min-height: 100vh;
@@ -69,7 +68,13 @@ button:focus-visible {
 
 #app {
   margin: 0 auto;
-  text-align: center;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -89,12 +94,12 @@ img{
 
 .header{
   background-color: white;
-  width: 1320px;
+  width: 1365px;
 }
 .header-menu{
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  align-items: center;
   padding: 20px;
   margin-top: 10px;
 }
@@ -165,7 +170,8 @@ img{
   justify-content: space-between;
   align-items: center;
   background-color: #303030;
-  min-height: 100px;
+  min-height: 80px;
+  padding-left: 20px;
 }
 
 .footer-button{
@@ -182,6 +188,7 @@ img{
 }
 .col-footer{
   display: flex;
+  align-items: center;
   gap: 20px;
   color: white;
 }

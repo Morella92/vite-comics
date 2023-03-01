@@ -3,10 +3,8 @@
 
       <div class="footer">
 
-        <div class="padding-button">
-          <button class="footer-button">Sign-up now!</button>
-        </div>
-
+        <button class="footer-button">Sign-up now!</button>
+        
         <div class="col-footer">
           <h4 class="footer-title">follow us</h4>
           <ul class="footer-list">
