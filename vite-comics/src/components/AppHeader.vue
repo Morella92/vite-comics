@@ -1,7 +1,7 @@
 <template>
-    <div class="container body-bg">
-        <nav>
-        
+    <div class="container">
+        <nav class="bg-white">
+            <img src="/images/dc-logo.png" alt="">
         </nav>
     </div>
 </template>
@@ -13,9 +13,8 @@
 </script>
 
 <style lang="scss" scoped>
-@use '../style/partials/variables' as *;
-
-.body-bg{
-    background-color: black;
+.bg-white{
+    background-color: white;
 }
+
 </style>
