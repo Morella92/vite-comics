@@ -1,6 +1,8 @@
 <template>
-    <div class="container">
-        ciao
+    <div class="container body-bg">
+        <nav>
+        
+        </nav>
     </div>
 </template>
 
@@ -12,4 +14,8 @@
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
+
+.body-bg{
+    background-color: black;
+}
 </style>
