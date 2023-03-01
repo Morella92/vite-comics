@@ -35,8 +35,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  background-color: #1C1C1C;
   min-height: 100vh;
 }
 
@@ -45,7 +44,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -55,26 +54,144 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
+} */
+/* button:hover {
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 .card {
   padding: 2em;
 }
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+/**STILE BLOCCHI**/
+
+img{
+  max-width: 100%;
+}
+/**HEADER RULES**/
+
+.logo{
+  width: 75px;
+}
+
+.header{
+  background-color: white;
+  width: 1320px;
+}
+.header-menu{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.menu-list{
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  text-transform: uppercase;
+}
+
+/**MAIN RULES**/
+
+.content-title{
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.row-brands{
+  color: white;
+  background-color:#0282F9 ;
+  padding: 30px;
+}
+.list-brand{
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.list-images{
+  width: 40px;
+}
+
+.list-items-description{
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.row-hero{
+  background-image: url('../public/footer-bg.jpg');
+  display: flex;
+}
+
+.list-hero{
+  list-style: none;
+  padding-left: 20px;
+  color: white;
+  text-align: left;
+}
+
+.list-title{
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+/**FOOTER RULES**/
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #303030;
+  min-height: 100px;
+}
+
+.footer-button{
+  color: white;
+  text-transform: uppercase;
+  background-color: #303030;
+  border: 4px solid #0282F9;
+  line-height: 40px;
+}
+
+.footer-title{
+  color: #0282F9;
+  text-transform: uppercase;
+}
+.col-footer{
+  display: flex;
+  gap: 20px;
+  color: white;
+}
+
+.footer-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

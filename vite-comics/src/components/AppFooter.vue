@@ -1,8 +1,47 @@
 <template>
-    <div class="container">
-        
-    </div>
-</template>
+    <footer class="container">
+
+      <div class="footer">
+
+        <div class="padding-button">
+          <button class="footer-button">Sign-up now!</button>
+        </div>
+
+        <div class="col-footer">
+          <h4 class="footer-title">follow us</h4>
+          <ul class="footer-list">
+            <li>
+                <a href="#">
+                    <img src="../../public/footer-facebook.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../../public/footer-twitter.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../../public/footer-youtube.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../../public/footer-pinterest.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../../public/footer-periscope.png" alt="">
+                </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+  
+    </footer>
+  </template>
 
 <script>
   export default {
@@ -11,5 +50,6 @@
 </script>
 
 <style lang="scss" scoped>
+@use '../style/partials/reset'
 
 </style>

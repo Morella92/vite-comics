@@ -13,20 +13,16 @@ export default {
 </script>
 
 <template>
-  <div class="container body-bg"> 
-    
-  </div>
   
   <AppHeader/>
   <AppMain/>
   <AppFooter/>
 </template>
 
-<style lang="scss" scoped>
-@use './style/general.scss';
-@use './style/partials/reset';
-.body-bg{
+<style lang="scss">
+
+  body{
     background-color: black;
-    min-height: 350px;
-}
+  }
+
 </style>
