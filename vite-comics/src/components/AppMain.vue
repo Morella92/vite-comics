@@ -51,7 +51,9 @@
                 <h4>dc comics</h4>
             </li>
             <li v-for="(comics, index) in comicsList" :key="index">
-                {{ comics }}
+                <a :href="comics.link">
+                    {{ comics.label }}
+                </a>
             </li>
             <!-- <li>
                 <a href="#">
@@ -88,7 +90,9 @@
                 <h4>shop</h4>
             </li>
             <li v-for="(shop, index) in shopList" :key="index">
-                {{ shop }}
+                <a :href="shop.link">
+                    {{ shop.label }}
+                </a>
             </li>
             <!-- <li>
                 <a href="#">
@@ -107,7 +111,9 @@
                 <h4>DC</h4>
             </li>
             <li v-for="(dc, index) in dcList" :key="index">
-                {{ dc }}
+                <a :href="dc.link">
+                    {{ dc.label }}
+                </a>
             </li>
             <!-- <li>
                 <a href="#">
@@ -171,7 +177,9 @@
                 <h4>sites</h4>
             </li>
             <li v-for="(sites, index) in siteList" :key="index">
-                {{ sites }}
+                <a :href="sites.link">
+                    {{ sites.label }}
+                </a>
             </li>
             <!-- <li>
                 <a href="#">
@@ -214,42 +222,41 @@
         return{
 
             comicsList: [
-
-                'Characters',
-                'Comics',
-                'Movies',
-                'TV',
-                'Games',
-                'Videos',
-                'News'
+                {label:'Characters', link: '#' },
+                {label:'Comics', link: '#' },
+                {label:'Movies', link: '#' },
+                {label:'TV', link: '#' },
+                {label:'Games', link: '#' },
+                {label:'Videos', link: '#' },
+                {label:'News', link: '#' },
             ],
 
             shopList: [
 
-                'Shop DC',
-                'Shop DC collectibles'
+                {label:'Shop SC', link: '#' },
+                {label:'Sho DC Collectibles', link: '#' },
             ],
 
             dcList: [
-                'Term of Use',
-                'Privacy policy',
-                'Ad Chioces',
-                'Advertising',
-                'Jobs',
-                'Subscriptions',
-                'Talent Workshops',
-                'CPSC Certificates',
-                'Ratings',
-                'Shop Help',
-                'Contact Us'
+                {label:'Term of Use', link: '#' },
+                {label:'Privacy Policy', link: '#' },
+                {label:'Ad Choices', link: '#' },
+                {label:'Advertising', link: '#' },
+                {label:'Jobs', link: '#' },
+                {label:'Subscription', link: '#' },
+                {label:'Takent Workshops', link: '#' },
+                {label:'CPSC Certificates', link: '#' },
+                {label:'Ratings', link: '#' },
+                {label:'Shop help', link: '#' },
+                {label:'Contact us', link: '#' },
             ],
 
             siteList: [
-                'DC',
-                'MAD Magazine',
-                'DC Kids',
-                'DC Universe',
-                'DC Power Visa'
+                {label:'DC', link: '#' },
+                {label:'MAD Magazine', link: '#' },
+                {label:'DC Kids', link: '#' },
+                {label:'DC Universe', link: '#' },
+                {label:'DC Power Visa', link: '#' },
             ]
         }
     }

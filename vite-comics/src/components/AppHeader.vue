@@ -8,7 +8,9 @@
           <ul class="menu-list">
 
             <li v-for="(item, index) in menuList" :key="index">
-                {{item}}
+                <a :href="item.link">
+                    {{item.label}}
+                </a>
             </li>
             <!-- <li class="menu-item active">
                 <a href="#">Comics</a>
@@ -55,16 +57,15 @@
 		    return {
 
 			    menuList: [
-                    'Characters',
-                    'Comics',
-                    'Movies',
-                    'TV',
-                    'Games',
-                    'Collectibles',
-                    'Videos',
-                    'Fans',
-                    'News',
-                    'Shop'
+                    {label:'Characters', link: '#' },
+                    {label:'Comics', link: '#' },
+                    {label:'Movies', link: '#' },
+                    {label:'TV', link: '#' },
+                    {label:'Games', link: '#' },
+                    {label:'Collectibles', link: '#' },
+                    {label:'Videos', link: '#' },
+                    {label:'News', link: '#' },
+                    {label:'Shop', link: '#' },
                 ],
 		    }
         },
