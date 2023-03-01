@@ -7,10 +7,10 @@
 
           <ul class="menu-list">
 
-            <li>
-                <a href="#">Characters</a> 
+            <li v-for="(item, index) in menuList" :key="index">
+                {{item}}
             </li>
-            <li class="menu-item active">
+            <!-- <li class="menu-item active">
                 <a href="#">Comics</a>
             </li>
             <li>
@@ -36,7 +36,7 @@
             </li>
             <li>
                 <a href="#">Shop</a>
-            </li>
+            </li> -->
 
           </ul>
 
@@ -47,7 +47,26 @@
   </template>
   
   <script>
+
     export default {
       
+        data() {
+
+		    return {
+
+			    menuList: [
+                    'Characters',
+                    'Comics',
+                    'Movies',
+                    'TV',
+                    'Games',
+                    'Collectibles',
+                    'Videos',
+                    'Fans',
+                    'News',
+                    'Shop'
+                ],
+		    }
+        },
     }
   </script>

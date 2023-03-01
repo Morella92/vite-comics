@@ -50,12 +50,10 @@
             <li class="list-title"> 
                 <h4>dc comics</h4>
             </li>
-            <li>
-                <a href="#">
-                    Caracters
-                </a>
+            <li v-for="(comics, index) in comicsList" :key="index">
+                {{ comics }}
             </li>
-            <li>
+            <!-- <li>
                 <a href="#">
                     Comics
                 </a>
@@ -84,12 +82,15 @@
                 <a href="#">
                     News
                 </a>
-            </li>
+            </li> -->
 
             <li class="list-title">
                 <h4>shop</h4>
             </li>
-            <li>
+            <li v-for="(shop, index) in shopList" :key="index">
+                {{ shop }}
+            </li>
+            <!-- <li>
                 <a href="#">
                     Shop DC
                 </a>
@@ -98,14 +99,17 @@
                 <a href="#">
                     Shop DC collectibles
                 </a>
-            </li>
+            </li> -->
           </ul>
 
           <ul class="list-hero">
             <li class="list-title">
                 <h4>DC</h4>
             </li>
-            <li>
+            <li v-for="(dc, index) in dcList" :key="index">
+                {{ dc }}
+            </li>
+            <!-- <li>
                 <a href="#">
                     Term of Use
                 </a>    
@@ -159,14 +163,17 @@
                 <a href="#">
                     Contact Us
                 </a>    
-            </li>
+            </li> -->
           </ul>
 
           <ul class="list-hero">
             <li class="list-title"> 
                 <h4>sites</h4>
             </li>
-            <li>
+            <li v-for="(sites, index) in siteList" :key="index">
+                {{ sites }}
+            </li>
+            <!-- <li>
                 <a href="#">
                     DC
                 </a>
@@ -190,7 +197,7 @@
                 <a href="#">
                     DC Power Visa
                 </a>
-            </li>
+            </li> -->
           </ul>
 
         </div>
@@ -202,6 +209,50 @@
 <script>
   export default {
     
+    data(){
+
+        return{
+
+            comicsList: [
+
+                'Characters',
+                'Comics',
+                'Movies',
+                'TV',
+                'Games',
+                'Videos',
+                'News'
+            ],
+
+            shopList: [
+
+                'Shop DC',
+                'Shop DC collectibles'
+            ],
+
+            dcList: [
+                'Term of Use',
+                'Privacy policy',
+                'Ad Chioces',
+                'Advertising',
+                'Jobs',
+                'Subscriptions',
+                'Talent Workshops',
+                'CPSC Certificates',
+                'Ratings',
+                'Shop Help',
+                'Contact Us'
+            ],
+
+            siteList: [
+                'DC',
+                'MAD Magazine',
+                'DC Kids',
+                'DC Universe',
+                'DC Power Visa'
+            ]
+        }
+    }
   }
 </script>
 
