@@ -63,62 +63,53 @@
                             <li class="list-title"> 
                                 <h4>dc comics</h4>
                             </li>
-                            <li class="list-hero-items" v-for="(comics, index) in comicsList" :key="index">
-                                <a :href="comics.link">
-                                    {{ comics.label }}
-                                </a>
-                            </li>
+                            <ListItem class="list-hero-items" v-for="(comics, index) in comicsList" :key="index"
+                                :comics="comics">
+                            </ListItem>
 
                             <li class="list-title">
                                 <h4>shop</h4>
                             </li>
-                            <li class="list-hero-items" v-for="(shop, index) in shopList" :key="index">
-                                <a :href="shop.link">
-                                    {{ shop.label }}
-                                </a>
-                            </li>
+                            <ListItem class="list-hero-items" v-for="(shop, index) in shopList" :key="index"
+                                :comics="shop">
+                               
+                            </ListItem>
                         </ul>
 
                         <ul class="list-hero">
                             <li class="list-title">
                                 <h4>DC</h4>
                             </li>
-                            <li class="list-hero-items" v-for="(dc, index) in dcList" :key="index">
-                                <a :href="dc.link">
-                                    {{ dc.label }}
-                                </a>
-                            </li>
+                            <ListItem class="list-hero-items" v-for="(dc, index) in dcList" :key="index"
+                                :comics="dc">
+                            </ListItem>
                         </ul>
 
                         <ul class="list-hero">
                             <li class="list-title"> 
                                 <h4>sites</h4>
                             </li>
-                            <li class="list-hero-items" v-for="(sites, index) in siteList" :key="index">
-                                <a :href="sites.link">
-                                    {{ sites.label }}
-                                </a>
-                            </li>
+                            <ListItem class="list-hero-items" v-for="(sites, index) in siteList" :key="index"
+                                :comics="sites">
+                            </ListItem>
                         </ul>
 
                         <img class="position" src="../../public/dc-logo-bg.png" alt="">
-                    </div>
-                    
+                    </div> 
                 </div>
-            
             </div>
-     
         </div>
-        
     </main>
   </template>
 
 <script>
 import CardMain from './CardMain.vue'
+import ListItem from './ListItem.vue';
 
   export default {
     components:{
-        CardMain
+        CardMain,
+        ListItem
     },
 
     data(){
@@ -345,9 +336,9 @@ import CardMain from './CardMain.vue'
 }
 
 .list-hero-items{
-
     &:hover{
-        color: $main-blue;
-    }
+    color: $main-blue;
+  }
 }
+
 </style>

@@ -26,7 +26,7 @@
 }
 
 .img-cards{
-    width: 100px;
+    width: 150px;
     display: block;
     aspect-ratio: 1/1;
 }
