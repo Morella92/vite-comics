@@ -3,7 +3,16 @@
       <div class="container">
 
         <div class="main-content">
-          <h3 class="content-title"> --Content goes here--</h3>
+          
+        </div>
+
+        <div class="container">
+            <div class="row" v-for="(card, index) in cardsList" :key="index">
+                <div class="col">
+                    {{ card.thumb }}
+
+                </div>
+            </div>
         </div>
 
         <div class="row-brands">
@@ -43,7 +52,6 @@
 
         </div>
 
-
         <div class="row-hero"> 
 
           <ul class="list-hero">
@@ -55,36 +63,6 @@
                     {{ comics.label }}
                 </a>
             </li>
-            <!-- <li>
-                <a href="#">
-                    Comics
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Movies
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    TV
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Games
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Videos
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    News
-                </a>
-            </li> -->
 
             <li class="list-title">
                 <h4>shop</h4>
@@ -94,16 +72,6 @@
                     {{ shop.label }}
                 </a>
             </li>
-            <!-- <li>
-                <a href="#">
-                    Shop DC
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Shop DC collectibles
-                </a>
-            </li> -->
           </ul>
 
           <ul class="list-hero">
@@ -115,61 +83,6 @@
                     {{ dc.label }}
                 </a>
             </li>
-            <!-- <li>
-                <a href="#">
-                    Term of Use
-                </a>    
-            </li>
-            <li>
-                <a href="#">
-                    Privacy policy
-                </a>    
-            </li>
-            <li>
-                <a href="#">
-                    Ad Choices
-                </a>    
-            </li>
-            <li>
-                <a href="#">
-                    Advertising
-                </a>    
-            </li>
-            <li>
-                <a href="#">
-                    Jobs
-                </a>    
-            </li>
-            <li>
-                <a href="#">
-                    Subscriptions
-                </a>    
-            </li>
-            <li>
-                <a href="#">
-                    Talent Workshops
-                </a>    
-            </li>
-            <li>
-                <a href="#">
-                    CPSC Certificates
-                </a>    
-            </li>
-            <li>
-                <a href="#">
-                    Ratings
-                </a>    
-            </li>
-            <li>
-                <a href="#">
-                    Shop Help
-                </a>    
-            </li>
-            <li>
-                <a href="#">
-                    Contact Us
-                </a>    
-            </li> -->
           </ul>
 
           <ul class="list-hero">
@@ -181,38 +94,12 @@
                     {{ sites.label }}
                 </a>
             </li>
-            <!-- <li>
-                <a href="#">
-                    DC
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    MAD Magazine
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    DC Kids
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    DC Universe
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    DC Power Visa
-                </a>
-            </li> -->
           </ul>
 
           <img class="position" src="../../public/dc-logo-bg.png" alt="">
 
         </div>
-
-        
+     
       </div>
     </main>
   </template>
@@ -260,17 +147,96 @@
                 {label:'DC Kids', link: '#' },
                 {label:'DC Universe', link: '#' },
                 {label:'DC Power Visa', link: '#' },
+            ],
+
+            cardsList: [
+                {
+                    "thumb": "../../public/image-1.jpg",
+                    "price": "$19.99",
+                    "series": "Action Comics",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "../../public/image-2.jpg",
+                    "price": "$3.99",
+                    "series": "American Vampire 1976",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "../../public/image-3.jpg",
+                    "price": "$16.99",
+                    "series": "Aquaman",
+                    "type": "graphic novel"
+                },
+                {
+                    "thumb": "../../public/image-4.jpg",
+                    "price": "$2.99",
+                    "series": "Batgirl",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "../../public/image-5.jpg",
+                    "price": "$3.99",
+                    "series": "Batman",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "../../public/image-6.jpg",
+                    "price": "$2.99",
+                    "series": "Batman Beyond",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "../../public/image-7.jpg",
+                    "price": "$3.99",
+                    "series": "Batman/Superman",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "../../public/image-8.jpg",
+                    "price": "$4.99",
+                    "series": "Batman/Superman Annual",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "../../public/image-9.jpg",
+                    "price": "$5.99",
+                    "series": "Batman: The Joker War Zone",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "../../public/image-10.jpg",
+                    "price": "$6.99",
+                    "series": "Batman: Three Jokers",
+                    "type": "comic book"
+                },
+                {   "thumb": "../../public/image-11.jpg",
+                    "price": "$4.99",
+                    "series": "Batman: White Knight Presents: Harley Quinn",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "../../public/image-12.jpg",
+                    "price": "$16.99",
+                    "series": "Catwoman",
+                    "type": "graphic novel"
+                }
             ]
         }
     }
-  }
+}
 </script>
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
 .main-content{
-    min-height: 60px;
+    background-image: url('../../public/jumbotron.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 200px;
 }
+
 .content-title{
   color: $white;
   padding-left: 20px;
