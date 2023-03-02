@@ -2,7 +2,7 @@
     <main>
       <div class="container">
 
-        <div>
+        <div class="main-content">
           <h3 class="content-title"> --Content goes here--</h3>
         </div>
 
@@ -10,33 +10,33 @@
 
           <ul class="list-brand">
             <li>
-                <a class="list-items" href="#">
-                    <img class="list-images" src="../../public/buy-comics-digital-comics.png" alt="">
-                    <h3 class="list-items-description">digital comics</h3>
+                <a class="list-brands-items" href="#">
+                    <img class="list-brands-images" src="../../public/buy-comics-digital-comics.png" alt="">
+                    <h3 class="list-brands-description">digital comics</h3>
                 </a>  
             </li>
             <li>
-                <a class="list-items" href="#">
-                    <img class="list-images" src="../../public/buy-comics-merchandise.png" alt="">
-                    <h3 class="list-items-description">mc merchandise</h3>
+                <a class="list-brands-items" href="#">
+                    <img class="list-brands-images" src="../../public/buy-comics-merchandise.png" alt="">
+                    <h3 class="list-brands-description">mc merchandise</h3>
                 </a>
             </li>
             <li>
-                <a class="list-items" href="#">
-                    <img class="list-images" src="../../public/buy-comics-subscriptions.png" alt="">
-                    <h3 class="list-items-description">subscription</h3>
+                <a class="list-brands-items" href="#">
+                    <img class="list-brands-images" src="../../public/buy-comics-subscriptions.png" alt="">
+                    <h3 class="list-brands-description">subscription</h3>
                 </a>
             </li>
             <li>
-                <a class="list-items" href="#">
-                    <img class="list-images" src="../../public/buy-comics-shop-locator.png" alt="">
-                    <h3 class="list-items-description">comic shop locator</h3>
+                <a class="list-brands-items" href="#">
+                    <img class="list-brands-images" src="../../public/buy-comics-shop-locator.png" alt="">
+                    <h3 class="list-brands-description">comic shop locator</h3>
                 </a>
             </li>
             <li>
-                <a class="list-items" href="#">
-                    <img class="list-images" src="../../public/buy-dc-power-visa.svg" alt="">
-                    <h3 class="list-items-description">dc power visa </h3>
+                <a class="list-brands-items" href="#">
+                    <img class="list-brands-images" src="../../public/buy-dc-power-visa.svg" alt="">
+                    <h3 class="list-brands-description">dc power visa </h3>
                 </a>
             </li>
           </ul>
@@ -50,7 +50,7 @@
             <li class="list-title"> 
                 <h4>dc comics</h4>
             </li>
-            <li v-for="(comics, index) in comicsList" :key="index">
+            <li class="list-hero-items" v-for="(comics, index) in comicsList" :key="index">
                 <a :href="comics.link">
                     {{ comics.label }}
                 </a>
@@ -89,7 +89,7 @@
             <li class="list-title">
                 <h4>shop</h4>
             </li>
-            <li v-for="(shop, index) in shopList" :key="index">
+            <li class="list-hero-items" v-for="(shop, index) in shopList" :key="index">
                 <a :href="shop.link">
                     {{ shop.label }}
                 </a>
@@ -110,7 +110,7 @@
             <li class="list-title">
                 <h4>DC</h4>
             </li>
-            <li v-for="(dc, index) in dcList" :key="index">
+            <li class="list-hero-items" v-for="(dc, index) in dcList" :key="index">
                 <a :href="dc.link">
                     {{ dc.label }}
                 </a>
@@ -176,7 +176,7 @@
             <li class="list-title"> 
                 <h4>sites</h4>
             </li>
-            <li v-for="(sites, index) in siteList" :key="index">
+            <li class="list-hero-items" v-for="(sites, index) in siteList" :key="index">
                 <a :href="sites.link">
                     {{ sites.label }}
                 </a>
@@ -267,16 +267,19 @@
 </script>
 
 <style lang="scss" scoped>
-
+@use '../style/partials/variables' as *;
+.main-content{
+    min-height: 60px;
+}
 .content-title{
-  color: white;
-  text-align: left;
+  color: $white;
   padding-left: 20px;
+  padding-top: 20px;
 }
 
 .row-brands{
-  color: white;
-  background-color:#0282F9 ;
+  color: $white;
+  background-color: $main-blue ;
   padding: 20px;
 }
 .list-brand{
@@ -285,19 +288,28 @@
   gap: 30px;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
-.list-items{
+.list-brands-items{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+
+  &:hover{
+    color: rgba($color: #a38f8f, $alpha: 1.0);
+  }
 }
-.list-images{
+.list-brands-images{
   width: 40px;
+
+  &:hover{
+    color: rgba($color: #a38f8f, $alpha: 1.0);
+  }
 }
 
-.list-items-description{
+.list-brands-description{
   text-transform: uppercase;
   font-size: 15px;
 }
@@ -309,17 +321,16 @@
 }
 
 .position{
-  width: 420px;
+  width: 400px;
   position: absolute;
   right: 200px;
   bottom: 0;
-  top: 0;
+  top: -50px;
 }
 .list-hero{
   list-style: none;
   padding-left: 20px;
-  color: white;
-  text-align: left;
+  color: $white;
   padding-bottom: 20px;
 }
 
@@ -329,4 +340,10 @@
   padding-top: 20px;
 }
 
+.list-hero-items{
+
+    &:hover{
+        color: $main-blue;
+    }
+}
 </style>

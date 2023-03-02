@@ -7,7 +7,7 @@
 
           <ul class="menu-list">
 
-            <li v-for="(item, index) in menuList" :key="index">
+            <li class="header-list-items" v-for="(item, index) in menuList" :key="index">
                 <a :href="item.link">
                     {{item.label}}
                 </a>
@@ -39,7 +39,6 @@
             <li>
                 <a href="#">Shop</a>
             </li> -->
-
           </ul>
 
 
@@ -48,11 +47,12 @@
     </header>
   </template>
   
-  <script>
+  <script> 
 
     export default {
       
         data() {
+
 
 		    return {
 
@@ -73,14 +73,15 @@
   </script>
 
   <style lang="scss" scoped>
+@use '../style/partials/variables' as *;
 
   .logo{
   width: 70px;
 }
 
 .header{
-  background-color: white;
-  width: 1365px;
+  background-color: $white;
+  margin-top: 30px;
 }
 
 .header-menu{
@@ -97,4 +98,25 @@
   gap: 15px;
   text-transform: uppercase;
 }
+
+.header-list-items{
+    position: relative;
+
+    &:hover{
+        color: $main-blue;
+    }
+
+    &:hover::after{
+        content: '';
+        display: block;
+        width: 40px;
+        padding: 2px;
+        background-color: $main-blue;
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
   </style>

@@ -10,27 +10,27 @@
           <ul class="footer-list">
             <li>
                 <a href="#">
-                    <img src="../../public/footer-facebook.png" alt="">
+                    <img class="footer-list-items" src="../../public/footer-facebook.png" alt="">
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="../../public/footer-twitter.png" alt="">
+                    <img class="footer-list-items" src="../../public/footer-twitter.png" alt="">
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="../../public/footer-youtube.png" alt="">
+                    <img class="footer-list-items" src="../../public/footer-youtube.png" alt="">
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="../../public/footer-pinterest.png" alt="">
+                    <img class="footer-list-items" src="../../public/footer-pinterest.png" alt="">
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="../../public/footer-periscope.png" alt="">
+                    <img class="footer-list-items" src="../../public/footer-periscope.png" alt="">
                 </a>
             </li>
           </ul>
@@ -48,6 +48,7 @@
 </script>
 
 <style lang="scss" scoped>
+@use '../style/partials/variables' as *;
 .footer{
   display: flex;
   justify-content: space-between;
@@ -59,22 +60,30 @@
 }
 
 .footer-button{
-  color: white;
+  color: $white;
   text-transform: uppercase;
   background-color: #303030;
-  border: 4px solid #0282F9;
+  border: 4px solid $main-blue;
   line-height: 40px;
+
+  &:hover{
+    transform: scale(1.1);
+  }
 }
 
 .footer-title{
-  color: #0282F9;
+  color: $main-blue;
   text-transform: uppercase;
+
+  &:hover{
+    color: $white;
+  }
 }
 .col-footer{
   display: flex;
   align-items: center;
   gap: 20px;
-  color: white;
+  color: $white;
 }
 
 .footer-list{
@@ -84,6 +93,11 @@
   gap: 20px;
 }
 
+.footer-list-items{
 
+  &:hover{
+    transform: scale(1.1);
+  }
+}
 
 </style>
