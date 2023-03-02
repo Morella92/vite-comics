@@ -7,11 +7,9 @@
         </div>
 
         <div class="container">
-            <div class="row" v-for="(card, index) in cardsList" :key="index">
-                <div class="col">
-                    {{ card.thumb }}
-
-                </div>
+            <div class="row-cards">
+                <CardMain v-for="(element, index) in cardsList" :key="index" 
+                :card="element.thumb" :src="element.series"/>
             </div>
         </div>
 
@@ -105,8 +103,13 @@
   </template>
 
 <script>
+import CardMain from './CardMain.vue'
+
   export default {
-    
+    components:{
+        CardMain
+    },
+
     data(){
 
         return{
@@ -233,16 +236,33 @@
     background-image: url('../../public/jumbotron.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    min-height: 200px;
+    min-height: 350px;
 }
 
-.content-title{
-  color: $white;
-  padding-left: 20px;
-  padding-top: 20px;
+.row-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
+.col-cards{
+    flex-basis: calc(100% / 6);
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.img-cards{
+    width: 120px;
+    display: block;
+    aspect-ratio: 1/1;
+}
+
+.cards-p{
+    color: white;
+    text-transform: uppercase;
+    padding: 20px 0;
+    font-size: 13px;
+}
 .row-brands{
   color: $white;
   background-color: $main-blue ;
