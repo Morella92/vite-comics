@@ -1,9 +1,10 @@
 <template>
-    <footer class="container">
+    <footer class="footer">
 
-      <div class="footer">
+      <div class="container">
 
-        <button class="footer-button">Sign-up now!</button>
+        <div class="row-footer">
+          <button class="footer-button">Sign-up now!</button>
         
         <div class="col-footer">
           <h4 class="footer-title">follow us</h4>
@@ -36,6 +37,7 @@
           </ul>
 
         </div>
+        </div>
       </div>
   
     </footer>
@@ -49,14 +51,15 @@
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
+
 .footer{
+  background-color: #303030;
+}
+.row-footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #303030;
   min-height: 70px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .footer-button{

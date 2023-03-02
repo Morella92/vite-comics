@@ -1,110 +1,115 @@
 <template>
     <main>
-      <div class="container">
-
-        <div class="main-content">
-          <button class="button-cards position-button">current series</button>
-        </div>
-
-        <div class="container">
-            <div class="row-cards">
-                <CardMain v-for="(element, index) in cardsList" :key="index" 
-                :card="element"/>
+      
+        <div>
+            <div class="main-content">
+                <button class="button-cards position-button">current series</button>
             </div>
 
-            <div class="row-cards">
-                <button class="button-cards">
-                    load more
-                </button>
+            <div class="container">
+                <div class="row-cards">
+                    <CardMain v-for="(element, index) in cardsList" :key="index" 
+                    :card="element"/>
+                </div>
+
+                <div class="row-cards">
+                    <button class="button-cards">
+                        load more
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <div class="row-brands">
+            <div class="row-brands">
 
-          <ul class="list-brand">
-            <li>
-                <a class="list-brands-items" href="#">
-                    <img class="list-brands-images" src="../../public/buy-comics-digital-comics.png" alt="">
-                    <h3 class="list-brands-description">digital comics</h3>
-                </a>  
-            </li>
-            <li>
-                <a class="list-brands-items" href="#">
-                    <img class="list-brands-images" src="../../public/buy-comics-merchandise.png" alt="">
-                    <h3 class="list-brands-description">mc merchandise</h3>
-                </a>
-            </li>
-            <li>
-                <a class="list-brands-items" href="#">
-                    <img class="list-brands-images" src="../../public/buy-comics-subscriptions.png" alt="">
-                    <h3 class="list-brands-description">subscription</h3>
-                </a>
-            </li>
-            <li>
-                <a class="list-brands-items" href="#">
-                    <img class="list-brands-images" src="../../public/buy-comics-shop-locator.png" alt="">
-                    <h3 class="list-brands-description">comic shop locator</h3>
-                </a>
-            </li>
-            <li>
-                <a class="list-brands-items" href="#">
-                    <img class="list-brands-images" src="../../public/buy-dc-power-visa.svg" alt="">
-                    <h3 class="list-brands-description">dc power visa </h3>
-                </a>
-            </li>
-          </ul>
+                <ul class="list-brand">
+                    <li>
+                        <a class="list-brands-items" href="#">
+                            <img class="list-brands-images" src="../../public/buy-comics-digital-comics.png" alt="">
+                            <h3 class="list-brands-description">digital comics</h3>
+                        </a>  
+                    </li>
+                    <li>
+                        <a class="list-brands-items" href="#">
+                            <img class="list-brands-images" src="../../public/buy-comics-merchandise.png" alt="">
+                            <h3 class="list-brands-description">mc merchandise</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-brands-items" href="#">
+                            <img class="list-brands-images" src="../../public/buy-comics-subscriptions.png" alt="">
+                            <h3 class="list-brands-description">subscription</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-brands-items" href="#">
+                            <img class="list-brands-images" src="../../public/buy-comics-shop-locator.png" alt="">
+                            <h3 class="list-brands-description">comic shop locator</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-brands-items" href="#">
+                            <img class="list-brands-images" src="../../public/buy-dc-power-visa.svg" alt="">
+                            <h3 class="list-brands-description">dc power visa </h3>
+                        </a>
+                    </li>
+                </ul>
 
-        </div>
+            </div>
 
-        <div class="row-hero"> 
+            <div class="main-bg">
+                <div class="container"> 
+                    <div class="row-hero">
+                        <ul class="list-hero">
+                            <li class="list-title"> 
+                                <h4>dc comics</h4>
+                            </li>
+                            <li class="list-hero-items" v-for="(comics, index) in comicsList" :key="index">
+                                <a :href="comics.link">
+                                    {{ comics.label }}
+                                </a>
+                            </li>
 
-          <ul class="list-hero">
-            <li class="list-title"> 
-                <h4>dc comics</h4>
-            </li>
-            <li class="list-hero-items" v-for="(comics, index) in comicsList" :key="index">
-                <a :href="comics.link">
-                    {{ comics.label }}
-                </a>
-            </li>
+                            <li class="list-title">
+                                <h4>shop</h4>
+                            </li>
+                            <li class="list-hero-items" v-for="(shop, index) in shopList" :key="index">
+                                <a :href="shop.link">
+                                    {{ shop.label }}
+                                </a>
+                            </li>
+                        </ul>
 
-            <li class="list-title">
-                <h4>shop</h4>
-            </li>
-            <li class="list-hero-items" v-for="(shop, index) in shopList" :key="index">
-                <a :href="shop.link">
-                    {{ shop.label }}
-                </a>
-            </li>
-          </ul>
+                        <ul class="list-hero">
+                            <li class="list-title">
+                                <h4>DC</h4>
+                            </li>
+                            <li class="list-hero-items" v-for="(dc, index) in dcList" :key="index">
+                                <a :href="dc.link">
+                                    {{ dc.label }}
+                                </a>
+                            </li>
+                        </ul>
 
-          <ul class="list-hero">
-            <li class="list-title">
-                <h4>DC</h4>
-            </li>
-            <li class="list-hero-items" v-for="(dc, index) in dcList" :key="index">
-                <a :href="dc.link">
-                    {{ dc.label }}
-                </a>
-            </li>
-          </ul>
+                        <ul class="list-hero">
+                            <li class="list-title"> 
+                                <h4>sites</h4>
+                            </li>
+                            <li class="list-hero-items" v-for="(sites, index) in siteList" :key="index">
+                                <a :href="sites.link">
+                                    {{ sites.label }}
+                                </a>
+                            </li>
+                        </ul>
 
-          <ul class="list-hero">
-            <li class="list-title"> 
-                <h4>sites</h4>
-            </li>
-            <li class="list-hero-items" v-for="(sites, index) in siteList" :key="index">
-                <a :href="sites.link">
-                    {{ sites.label }}
-                </a>
-            </li>
-          </ul>
-
-          <img class="position" src="../../public/dc-logo-bg.png" alt="">
-
-        </div>
+                        <img class="position" src="../../public/dc-logo-bg.png" alt="">
+                    </div>
+                    
+                </div>
+            
+            </div>
      
-      </div>
+        </div>
+        
     </main>
   </template>
 
@@ -238,6 +243,13 @@ import CardMain from './CardMain.vue'
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
+
+.row-main{
+    display: flex;
+    flex-direction: column;
+
+}
+
 .main-content{
     background-image: url('../../public/jumbotron.jpg');
     background-size: cover;
@@ -245,7 +257,6 @@ import CardMain from './CardMain.vue'
     min-height: 350px;
     position: relative;
 }
-
 .position-button{
     position: absolute;
     bottom: -40px;
@@ -265,6 +276,7 @@ import CardMain from './CardMain.vue'
     font-weight: 600;
     padding: 15px;
     margin-bottom: 20px;
+    margin-top: 10px;
     border: none;
 }
 .row-brands{
@@ -304,8 +316,10 @@ import CardMain from './CardMain.vue'
   font-size: 15px;
 }
 
+.main-bg{
+    background-image: url('../public/footer-bg.jpg');
+}
 .row-hero{
-  background-image: url('../public/footer-bg.jpg');
   display: flex;
   position: relative;
 }
