@@ -3,13 +3,19 @@
       <div class="container">
 
         <div class="main-content">
-          
+          <button class="button-cards position-button">current series</button>
         </div>
 
         <div class="container">
             <div class="row-cards">
                 <CardMain v-for="(element, index) in cardsList" :key="index" 
                 :card="element"/>
+            </div>
+
+            <div class="row-cards">
+                <button class="button-cards">
+                    load more
+                </button>
             </div>
         </div>
 
@@ -237,14 +243,30 @@ import CardMain from './CardMain.vue'
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 350px;
+    position: relative;
 }
 
+.position-button{
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+}
 .row-cards{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
+.button-cards{
+    color: $white;
+    background-color: $main-blue;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+}
 .row-brands{
   color: $white;
   background-color: $main-blue ;

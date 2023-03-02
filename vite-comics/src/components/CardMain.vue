@@ -22,7 +22,7 @@
 .col-cards{
     flex-basis: calc(100% / 6);
     padding-left: 30px;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
 .img-cards{
