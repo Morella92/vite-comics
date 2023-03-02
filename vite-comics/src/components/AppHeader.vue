@@ -72,7 +72,29 @@
     }
   </script>
 
-  <style lang="scss">
+  <style lang="scss" scoped>
 
+  .logo{
+  width: 70px;
+}
 
+.header{
+  background-color: white;
+  width: 1365px;
+}
+
+.header-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.menu-list{
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  text-transform: uppercase;
+}
   </style>

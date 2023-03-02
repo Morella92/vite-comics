@@ -268,5 +268,65 @@
 
 <style lang="scss" scoped>
 
+.content-title{
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.row-brands{
+  color: white;
+  background-color:#0282F9 ;
+  padding: 20px;
+}
+.list-brand{
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.list-images{
+  width: 40px;
+}
+
+.list-items-description{
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.row-hero{
+  background-image: url('../public/footer-bg.jpg');
+  display: flex;
+  position: relative;
+}
+
+.position{
+  width: 420px;
+  position: absolute;
+  right: 200px;
+  bottom: 0;
+  top: 0;
+}
+.list-hero{
+  list-style: none;
+  padding-left: 20px;
+  color: white;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.list-title{
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-top: 20px;
+}
 
 </style>

@@ -48,6 +48,42 @@
 </script>
 
 <style lang="scss" scoped>
-@use '../style/partials/reset'
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #303030;
+  min-height: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer-button{
+  color: white;
+  text-transform: uppercase;
+  background-color: #303030;
+  border: 4px solid #0282F9;
+  line-height: 40px;
+}
+
+.footer-title{
+  color: #0282F9;
+  text-transform: uppercase;
+}
+.col-footer{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.footer-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
 
 </style>
