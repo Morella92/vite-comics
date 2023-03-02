@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row-cards">
                 <CardMain v-for="(element, index) in cardsList" :key="index" 
-                :card="element.thumb" :src="element.series"/>
+                :card="element"/>
             </div>
         </div>
 
@@ -245,24 +245,6 @@ import CardMain from './CardMain.vue'
     align-items: center;
 }
 
-.col-cards{
-    flex-basis: calc(100% / 6);
-    padding-left: 30px;
-    padding-top: 20px;
-}
-
-.img-cards{
-    width: 120px;
-    display: block;
-    aspect-ratio: 1/1;
-}
-
-.cards-p{
-    color: white;
-    text-transform: uppercase;
-    padding: 20px 0;
-    font-size: 13px;
-}
 .row-brands{
   color: $white;
   background-color: $main-blue ;
